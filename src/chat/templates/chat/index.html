@@ -3,10 +3,13 @@
 {% block title %}{% endblock title %}
 
 {% block body %}
-What chat room would you like to enter?<br>
-<input id="room-name-input" type="text" size="100"><br>
-<input id="room-name-submit" type="button" value="Enter">
-
+<div class="mb-3">
+    <label for="room-name-input" class="mb-1">What chat room would you like to enter?</label>
+    <input class="form-control" id="room-name-input" type="text" size="100">
+</div>
+<div>
+    <input class="btn btn-primary" id="room-name-submit" type="button" value="Enter">
+</div>
 <script>
     document.querySelector('#room-name-input').focus();
     document.querySelector('#room-name-input').onkeyup = function(e) {
@@ -16,6 +19,7 @@ What chat room would you like to enter?<br>
     };
 
     document.querySelector('#room-name-submit').onclick = function(e) {
+        e.preventDefault()
         var roomName = document.querySelector('#room-name-input').value;
         window.location.pathname = '/chat/' + roomName + '/';
     };

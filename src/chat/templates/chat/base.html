@@ -1,11 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Chat with Django Channels {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'chat/bootstrap.min.css' %}">
+    <title>{% block title %}{% endblock title %}Chat with Django Channels</title>
+    <style>
+        body {
+            padding: 3em;
+        }
+    </style>
 </head>
 <body>
     {% block body %}{% endblock body %}
