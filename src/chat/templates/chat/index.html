@@ -3,12 +3,15 @@
 {% block title %}{% endblock title %}
 
 {% block body %}
+<header class="mb-3">
+    <h1 class="text-center">Real-time Chat</h1>
+</header>
 <div class="mb-3">
-    <label for="room-name-input" class="mb-1">What chat room would you like to enter?</label>
+    <label for="room-name-input" class="mb-1">Que sala de chat você gostaria de entrar?</label>
     <input class="form-control" id="room-name-input" type="text" size="100">
 </div>
 <div>
-    <input class="btn btn-primary" id="room-name-submit" type="button" value="Enter">
+    <input class="btn btn-primary" id="room-name-submit" type="button" value="Entrar">
 </div>
 <script>
     document.querySelector('#room-name-input').focus();
